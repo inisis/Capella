@@ -1,6 +1,6 @@
 # Capella
 
-Capella 是高效实现的CUDA版本opencv核函数。
+Sharp as a knife, solid as a stone
 
 # 联系
 - Desmond desmond.yao@buaa.edu.cn
