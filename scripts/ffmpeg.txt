@@ -1,0 +1,28 @@
+get your picture profile by using imageMagic
+```shell
+sudo  apt-get install imagemagick
+identify -verbose your.jpg
+```
+
+mp4 to h264 & h264 to mp4
+```shell
+ffmpeg -i your_input.mp4 -an -vcodec libx264 -crf 23 your_input.h264
+
+ffmpeg -framerate 24 -i your_input.h264 -c copy your_output.mp4
+```
+
+jpg to nv12 & nv12 to jpg
+```shell
+ffmpeg -i avatar_1440x1080.jpg -s 1440x1080 -pix_fmt nv12 avatar.yuv
+
+ffmpeg -s 1440x1080 -pix_fmt nv12 -i avatar.yuv avatar_1140x1080_new.jpg
+```
+
+yuv420p to rgb
+```shell
+ffmpeg -s 1440x1080 -pix_fmt yuv420p -i avatar.yuv -pix_fmt rgb24 avatar.rgb
+```
+rgb to jpg
+```shell
+ffmpeg -f rawvideo -pixel_format rgb24 -video_size 1440x1080 -i avatar.rgb -q 200 output.jpg
+```
