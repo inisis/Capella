@@ -26,3 +26,8 @@ rgb to jpg
 ```shell
 ffmpeg -f rawvideo -pixel_format rgb24 -video_size 1440x1080 -i avatar.rgb -q 200 output.jpg
 ```
+
+rgb to jpeg with high quality
+```shell
+ffmpeg -f rawvideo -pixel_format rgb24 -video_size 1440x1080 -i avatar.rgb -q:v 1 -qmin 1 -qmax 1 output.jpg
+```
