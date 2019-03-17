@@ -10,6 +10,13 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
+
+    if (argc < 2) {
+        std::cout << "Usage  : test_jpg_encoder input_file" << std::endl;
+        std::cout << "Example: ./test_jpe_encoder ../data/avatar_1440x1080.rgb" << std::endl;
+        return -1;
+    }
+
     Lion *lion = new Lion();
 
     cv::Size size = {1440, 1080};  //输入图像尺寸
@@ -20,7 +27,7 @@ int main(int argc, char *argv[])
     long image_size;
     file = fopen(argv[1], "rb");
 
-    if ( !file )
+    if (!file)
     {
         fprintf(stderr, "[GPUJPEG] [Error] Failed open %s for reading!\n", argv[1]);
         return -1;

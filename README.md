@@ -1,7 +1,14 @@
 # Capella
 
-Sharp as a knife, solid as a stone
+opencv functions rewritten by using cuda language.
 
-# 联系
+# Notice 
+
+currently supported functions
+> * Resize Linear(uchar&float)
+> * Bgr to Gray
+> * Jpeg Encode(referenced from [CESNET/GPUJPEG](https://github.com/CESNET/GPUJPEG))
+
+# Contact
 - Desmond desmond.yao@buaa.edu.cn
 
